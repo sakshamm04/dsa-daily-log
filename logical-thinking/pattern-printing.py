@@ -18,3 +18,12 @@ def numberPyramidPattern(num):
         for j in range(0, i+1):
             print(f"{j+1} ", end="")
         print()
+
+# Right-Half Pyramid Number Pattern 2nd Variation
+def numberPyramidPattern2(num):
+    for i in range(0, num):
+        for j in range(0, i+1):
+            print(f"{i+1} ", end="")
+        print()
+num = int(input())
+numberPyramidPattern2(num)
