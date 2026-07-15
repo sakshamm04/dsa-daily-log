@@ -32,3 +32,12 @@ def inversePyramidPattern(num):
         for j in range(0, num-i):
             print("* ", end="")
         print()
+
+# Inverse Right-half Pyramid Number Pattern
+def inversePyramidNumberPattern(num):
+    for i in range(0, num):
+        for j in range(0, num-i):
+            print(f"{j+1} ", end="")
+        print()
+num = int(input())
+inversePyramidNumberPattern(num)
