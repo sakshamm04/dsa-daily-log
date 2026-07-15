@@ -1,5 +1,5 @@
 # Star Square of n*n
-def squarePattern(num):
+def squarePattern(num):            
     for i in range(num):
         for j in range(num):
             print("* ",end=" ")
@@ -25,5 +25,10 @@ def numberPyramidPattern2(num):
         for j in range(0, i+1):
             print(f"{i+1} ", end="")
         print()
-num = int(input())
-numberPyramidPattern2(num)
+
+# Inverse Right-half Pyramid Pattern
+def inversePyramidPattern(num):
+    for i in range(0, num):
+        for j in range(0, num-i):
+            print("* ", end="")
+        print()
