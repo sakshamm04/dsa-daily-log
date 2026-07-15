@@ -47,8 +47,19 @@ def pyramidPattern(num):
             print("  ", end="")
         for k in range(2*i+1):
             print("* ",end="")
-        for j in range(num-i-1):
+        for l in range(num-i-1):
+            print("  ", end="")
+        print()
+
+# Inverse Pyramid Pattern
+def inversePyramidPattern(num):
+    for i in range(0, num):
+        for j in range(i): 
+            print("  ", end="")
+        for k in range(2*num-(2*i+1)):
+            print("* ", end="")
+        for l in range(i):
             print("  ", end="")
         print()
 num = int(input())
-pyramidPattern(num)
+inversePyramidPattern(num)
