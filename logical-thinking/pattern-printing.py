@@ -144,5 +144,19 @@ def alphabetTriangle2(num):
         for j in range(i+1):
             print(f"{chr(65+i)} ", end="")
         print()
-num = int(input())
-alphabetTriangle2(num)
+
+# Alphabet Pyramid Pattern
+def alphabetPyramidPattern(num):
+    for i in range(num):
+        for j in range(num-i-1):
+            print("  ", end="")
+
+        char_val = 65
+        for j in range(2*i+1):
+            print(f"{chr(char_val)} ", end="")
+            if j<i : char_val+=1
+            else: char_val-=1
+
+        for j in range(num-i-1):
+            print("  ", end="")
+        print()
