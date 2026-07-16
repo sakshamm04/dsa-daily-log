@@ -90,5 +90,18 @@ def rightPyramidPattern(num):
         for j in range(stars):
             print("* ",end="")
         print()
+
+# Binary Triangle
+def binaryTriangle(num):
+    start = 1
+    for i in range(num):
+        if (i % 2 == 0):
+            start = 1
+        else:
+            start = 0
+        for j in range(i+1):
+            print(f"{start} ",end="")
+            start = 1 - start
+        print()
 num = int(input())
-rightPyramidPattern(num)
+binaryTriangle(num)
