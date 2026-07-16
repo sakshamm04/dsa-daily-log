@@ -103,5 +103,23 @@ def binaryTriangle(num):
             print(f"{start} ",end="")
             start = 1 - start
         print()
-num = int(input())
-binaryTriangle(num)
+
+# Symmetrical Number Pyramid
+def symmetricalNumberPyramid(num):
+    for i in range(num):
+        for j in range(i+1):
+            print(f"{j+1} ", end="")
+        for j in range(2*num-2*(i+1)):
+            print("  ", end="")
+        for j in range(i+1,0, -1):
+            print(f"{j} ", end="")
+        print()
+
+# Number Triangle Pattern
+def numberPyramid(num):
+    incrementer = 1
+    for i in range(num):
+        for j in range(i+1):
+            print(f"{incrementer} ", end="")
+            incrementer += 1
+        print()
