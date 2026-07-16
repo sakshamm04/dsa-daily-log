@@ -80,3 +80,15 @@ def rhombusPyramidPattern(num):
         for l in range(i):
             print("  ", end="")
         print()
+
+# Right-Faced Pyramid Pattern
+def rightPyramidPattern(num):
+    for i in range(2*num-1):
+        stars = i+1
+        if (i>num-1) :
+            stars = 2*num-i-1
+        for j in range(stars):
+            print("* ",end="")
+        print()
+num = int(input())
+rightPyramidPattern(num)
