@@ -123,3 +123,12 @@ def numberPyramid(num):
             print(f"{incrementer} ", end="")
             incrementer += 1
         print()
+
+# Alphabet Triangle Pattern
+def alphabetTriangle(num):
+    for i in range(num):
+        for j in range(i+1):
+            print(f"{chr(65+j)} ", end="")
+        print()
+num = int(input())
+alphabetTriangle(num)
