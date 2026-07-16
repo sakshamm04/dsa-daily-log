@@ -130,5 +130,12 @@ def alphabetTriangle(num):
         for j in range(i+1):
             print(f"{chr(65+j)} ", end="")
         print()
+
+# Inverse Alphabet Triangle Pattern 
+def inverseAlphabetTriangle(num):
+    for i in range(num):
+        for j in range(num-i):
+            print(f"{chr(65+j)} ", end="")
+        print()
 num = int(input())
-alphabetTriangle(num)
+inverseAlphabetTriangle(num)
