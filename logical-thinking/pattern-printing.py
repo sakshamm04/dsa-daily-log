@@ -75,7 +75,7 @@ def rhombusPyramidPattern(num):
     for i in range(0, num):
         for j in range(i): 
             print("  ", end="")
-        for k in range(2*num-(2*i+1)):
+        for k in range(2*(num-i-1) + 1):
             print("* ", end="")
         for l in range(i):
             print("  ", end="")
@@ -168,5 +168,22 @@ def alphabetTriangle3(num):
         for j in range(i+1):
             print(f"{chr(char_value + j)} ", end="")
         print()
-num = int(input())
-alphabetTriangle3(num)
+
+# Hollow Diamond Star Pattern
+def hollowStarPattern(num):
+    for i in range(num):
+        for j in range(num-i):
+            print("* ", end="")
+        for j in range(2*i):
+            print("  ", end="")
+        for j in range(num-i):
+            print("* ", end="")
+        print()
+    for i in range(num):
+        for j in range(i+1):
+            print("* ", end="")
+        for j in range(2*(num-i-1)):
+            print("  ", end="")
+        for j in range(i+1):
+            print("* ", end="")
+        print()
