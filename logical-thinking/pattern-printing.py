@@ -4,21 +4,24 @@ class Patterns():
         self.num = num
 
     # 1. Star Square of n*n
-    def squarePattern(self):            
+    def squarePattern(self):
+        print("\n1. Star Square of n*n\n")        
         for i in range(self.num):
             for j in range(self.num):
-                print("* ",end=" ")
+                print("* ",end="")
             print()
 
     # 2. Right-Half Pyramid Star Pattern
     def trianglePattern(self):
+        print("2. Right-Half Pyramid Star Pattern\n")
         for i in range(self.num):
             for j in range(i+1):
-                print("* ",end=" ")
+                print("* ",end="")
             print()
 
     # 3. Right-Half Pyramid Number Pattern
     def numberPyramidPattern(self):
+        print("3. Right-Half Pyramid Number Pattern\n")
         for i in range(0, self.num):
             for j in range(0, i+1):
                 print(f"{j+1} ", end="")
@@ -26,6 +29,7 @@ class Patterns():
 
     # 4. Right-Half Pyramid Number Pattern 2nd Variation
     def numberPyramidPattern2(self):
+        print("4. Right-Half Pyramid Number Pattern 2nd Variation\n")
         for i in range(0, self.num):
             for j in range(0, i+1):
                 print(f"{i+1} ", end="")
@@ -33,6 +37,7 @@ class Patterns():
 
     # 5. Inverse Right-half Star Pyramid Pattern
     def inverseTrianglePattern(self):
+        print("5. Inverse Right-half Star Pyramid Pattern\n")
         for i in range(0, self.num):
             for j in range(0, self.num-i):
                 print("* ", end="")
@@ -40,6 +45,7 @@ class Patterns():
 
     # 6. Inverse Right-half Pyramid Number Pattern
     def inversePyramidNumberPattern(self):
+        print("6. Inverse Right-half Pyramid Number Pattern\n")
         for i in range(0, self.num):
             for j in range(0, self.num-i):
                 print(f"{j+1} ", end="")
@@ -47,6 +53,7 @@ class Patterns():
 
     # 7. Pyramid Pattern
     def pyramidPattern(self):
+        print("7. Pyramid Pattern\n")
         for i in range(0, self.num):
             for j in range(self.num-i-1):
                 print("  ", end="")
@@ -58,6 +65,7 @@ class Patterns():
 
     # 8. Inverse Pyramid Pattern
     def inversePyramidPattern(self):
+        print("8. Inverse Pyramid Pattern\n")
         for i in range(0, self.num):
             for j in range(i): 
                 print("  ", end="")
@@ -69,6 +77,7 @@ class Patterns():
 
     # 9. Dual-Side Pyramid pattern
     def rhombusPyramidPattern(self):
+        print("9. Dual-Side Pyramid pattern\n")
         for i in range(0, self.num):
             for j in range(self.num-i-1):
                 print("  ", end="")
@@ -88,6 +97,7 @@ class Patterns():
 
     # 10. Right-Faced Pyramid Pattern
     def rightPyramidPattern(self):
+        print("10. Right-Faced Pyramid Pattern\n")
         for i in range(2*self.num-1):
             stars = i+1
             if (i>self.num-1) :
@@ -98,6 +108,7 @@ class Patterns():
 
     # 11. Binary Triangle
     def binaryTriangle(self):
+        print("11. Binary Triangle\n")
         start = 1
         for i in range(self.num):
             if (i % 2 == 0):
@@ -111,6 +122,7 @@ class Patterns():
 
     # 12. Symmetrical Number Pyramid
     def symmetricalNumberPyramid(self):
+        print("12. Symmetrical Number Pyramid\n")
         for i in range(self.num):
             for j in range(i+1):
                 print(f"{j+1} ", end="")
@@ -122,6 +134,7 @@ class Patterns():
 
     # 13. Number Triangle Pattern
     def numberPyramid(self):
+        print("13. Number Triangle Pattern\n")
         incrementer = 1
         for i in range(self.num):
             for j in range(i+1):
@@ -131,6 +144,7 @@ class Patterns():
 
     # 14. Alphabet Triangle Pattern
     def alphabetTriangle(self):
+        print("14. Alphabet Triangle Pattern\n")
         for i in range(self.num):
             for j in range(i+1):
                 print(f"{chr(65+j)} ", end="")
@@ -138,6 +152,7 @@ class Patterns():
 
     # 15. Inverse Alphabet Triangle Pattern 
     def inverseAlphabetTriangle(self):
+        print("15. Inverse Alphabet Triangle Pattern\n")
         for i in range(self.num):
             for j in range(self.num-i):
                 print(f"{chr(65+j)} ", end="")
@@ -145,6 +160,7 @@ class Patterns():
 
     # 16. Alphabet Triangle Pattern 2nd Variation 
     def alphabetTriangle2(self):
+        print("16. Alphabet Triangle Pattern 2nd Variation\n")
         for i in range(self.num):
             for j in range(i+1):
                 print(f"{chr(65+i)} ", end="")
@@ -152,6 +168,7 @@ class Patterns():
 
     # 17. Alphabet Pyramid Pattern
     def alphabetPyramidPattern(self):
+        print("17. Alphabet Pyramid Pattern\n")
         for i in range(self.num):
             for j in range(self.num-i-1):
                 print("  ", end="")
@@ -168,6 +185,7 @@ class Patterns():
 
     # 18. Alphabet Triangle Pattern 3rd Variation
     def alphabetTriangle3(self):
+        print("# 18. Alphabet Triangle Pattern 3rd Variation\n")
         for i in range(self.num):
             char_value = 65 + self.num - i - 1
             for j in range(i+1):
@@ -176,6 +194,7 @@ class Patterns():
 
     # 19. Hollow Diamond Star Pattern
     def hollowStarPattern(self):
+        print("# 19. Hollow Diamond Star Pattern\n")
         for i in range(self.num):
             for j in range(self.num-i):
                 print("* ", end="")
@@ -195,6 +214,7 @@ class Patterns():
 
     # 20. Butterfly Star Pattern
     def butterflyStarPattern(self):
+        print("# 20. Butterfly Star Pattern\n")
         
         # THIS IS 1st WAY THAT CAME TO MY MIND IN ORDER TO SOLVE THIS
 
@@ -230,8 +250,10 @@ class Patterns():
             for j in range(stars):
                 print("* ", end="")
             print()
-        # 21. Hollow Square Pattern
+
+    #  21. Hollow Square Pattern
     def hollowSquarePattern(self):
+        print("21. Hollow Square Pattern\n")
         for i in range(self.num):
             for j in range(self.num):
                 if i==0 or i==self.num-1 or j==0 or j==self.num-1:
@@ -242,6 +264,7 @@ class Patterns():
 
      # 22. Number Square Matrix Pattern
     def numberSquareMatrix(self):
+        print("22. Number Square Matrix Pattern\n")
         size = 2*self.num-1
         for i in range(size):
             for j in range(size):
@@ -251,7 +274,7 @@ class Patterns():
                 right = (size-1)-j
                 min_val = min(top, left, bottom, right)
                 print_val = self.num - min_val
-                print(f"{print_val**2} ", end="")
+                print(f"{print_val} ", end="")
             print()
 
     def allPatternPrint(self):
@@ -299,5 +322,13 @@ class Patterns():
         print("\n")
         self.numberSquareMatrix()
 
-p = Patterns(4)
+while True:
+    num = input("Enter a Number: ")
+    if not num.isdigit() or int(num) == 0 :
+        print("Print a valid positive number next time!")
+    else:
+        num = int(num)
+        break
+
+p = Patterns(num)
 p.allPatternPrint()
