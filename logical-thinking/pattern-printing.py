@@ -230,6 +230,15 @@ class Patterns():
             for j in range(stars):
                 print("* ", end="")
             print()
+        # 21. Hollow Square Pattern
+    def hollowSquarePattern(self):
+        for i in range(self.num):
+            for j in range(self.num):
+                if i==0 or i==self.num-1 or j==0 or j==self.num-1:
+                    print("* ", end="")
+                else:
+                    print("  ", end="")
+            print()
 
     def allPatternPrint(self):
         self.squarePattern()
@@ -271,6 +280,8 @@ class Patterns():
         self.hollowStarPattern()
         print("\n\n")
         self.butterflyStarPattern()
+        print("\n\n")
+        self.hollowSquarePattern()
         print("\n\n")
 
 p = Patterns(5)
