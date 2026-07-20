@@ -186,11 +186,12 @@ class Patterns():
     # 18. Alphabet Triangle Pattern 3rd Variation
     def alphabetTriangle3(self):
         print("# 18. Alphabet Triangle Pattern 3rd Variation\n")
+        char_val = 69
         for i in range(self.num):
-            char_value = 65 + self.num - i - 1
             for j in range(i+1):
-                print(f"{chr(char_value + j)} ", end="")
+                print(f"{chr(char_val + j)} ", end="")
             print()
+            char_val -= 1
 
     # 19. Hollow Diamond Star Pattern
     def hollowStarPattern(self):
