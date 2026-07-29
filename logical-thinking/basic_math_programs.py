@@ -49,10 +49,33 @@ class Basic_math:
         else :
             print("Number is not Armstrong")
 
+    # 4. All divisors
+    def divisors(self):
+        print("\n")
+        print("4. All Divisors")
+        # How i did it my own way
+        # l = []
+        # for i in range(1, self.num +1):
+        #     if self.num % i == 0:
+        #         l.append(i)
+        # print(l)
+
+        # Another Way of doing it
+        l = []
+        for i in range(1, int(math.sqrt(self.num)) + 1): 
+            if int(self.num % i) == 0:
+                l.append(i)
+                if (int(self.num/i)) != i:
+                    l.append(int(self.num/i))
+        l.sort()
+        print(l)
+
+    # Print all Functions
     def all_programs(self):
         self.extraction_And_Reverse()
         self.check_Palindrome()
         self.armstrong_num()
+        self.divisors()
 
 num = int(input())
 obj = Basic_math(num)
