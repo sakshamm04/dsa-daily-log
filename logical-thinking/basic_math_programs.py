@@ -67,8 +67,21 @@ class Basic_math:
                 l.append(i)
                 if (int(self.num/i)) != i:
                     l.append(int(self.num/i))
-        l.sort()
+        l.sort() # O(n logn)
         print(l)
+
+    # 5. Prime Number
+    def primeNumber(self):
+        counter = 0
+        for i in range(1, int(math.sqrt(self.num))+1):
+            if self.num % i == 0:
+                counter += 1
+                if int(self.num/i) != i:
+                    counter += 1
+        if counter == 2:
+            print("A prime no.")
+        else:
+            print("Not a prime no.")
 
     # Print all Functions
     def all_programs(self):
@@ -76,6 +89,7 @@ class Basic_math:
         self.check_Palindrome()
         self.armstrong_num()
         self.divisors()
+        self.primeNumber()
 
 num = int(input())
 obj = Basic_math(num)
