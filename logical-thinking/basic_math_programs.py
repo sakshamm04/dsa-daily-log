@@ -80,7 +80,7 @@ class Basic_math:
                     counter += 1
         if counter == 2:
             print("A prime no.")
-        else:
+        else: 
             print("Not a prime no.")
 
     # Print all Functions
