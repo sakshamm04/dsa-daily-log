@@ -83,6 +83,30 @@ class Basic_math:
         else: 
             print("Not a prime no.")
 
+    # 6. GCD of two numbers 
+    # Brute Force, O(min(n1,n2))
+    def gcd(self):
+        # gcd = 1
+        num2 = int(input("Enter an extra num: "))
+        # for i in range(min(self.num, num2), 0, -1):
+        #     if self.num % i == 0 and num2 % i == 0:
+        #         gcd = i
+        #         break
+        # print(f"GCD = ",gcd)
+
+    # Euclidean Algo, O(log phi (min(a,b)))
+        # GCD(a,b) = GCD(a-b,b) OR GCD(a%b,b)
+        # Logic: Greater % Smaller (Seperately evauating value of a and b)
+        while(self.num > 0 and num2 > 0):
+            if self.num > num2:
+                self.num = int(self.num % num2)
+            else:
+                num2 = int(num2 % self.num)
+        if self.num == 0:
+            print("GCD: ",num2)
+        else:
+            print("GCD: ",self.num)
+
     # Print all Functions
     def all_programs(self):
         self.extraction_And_Reverse()
@@ -90,6 +114,7 @@ class Basic_math:
         self.armstrong_num()
         self.divisors()
         self.primeNumber()
+        self.gcd()
 
 num = int(input())
 obj = Basic_math(num)
