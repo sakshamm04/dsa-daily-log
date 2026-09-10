@@ -275,7 +275,7 @@ class Patterns():
                 right = (size-1)-j
                 min_val = min(top, left, bottom, right)
                 print_val = self.num - min_val
-                print(f"{print_val} ", end="")
+                print(f"\t{print_val} ", end="")
             print()
 
     def allPatternPrint(self):
