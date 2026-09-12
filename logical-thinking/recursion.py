@@ -18,8 +18,16 @@ def sumFirstN(num):
     else: 
         return num + sumFirstN(num-1)
 
-def reverseArr(p, q):
-    if(p >= q):
+def reverseArr(l, i):
+    n = len(l)
+    if i >= n // 2:
         return
-    reverseArr(p+1, q-1)
- 
+    l[i], l[n - i - 1] = l[n - i - 1], l[i]
+    reverseArr(l, i + 1)
+
+l = [1,2,3,4,5]
+l_c = l[:]
+print(l)
+i = 0
+reverseArr(l_c, i)
+print(l_c)
