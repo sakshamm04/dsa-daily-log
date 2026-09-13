@@ -10,9 +10,23 @@ class recursion:
 
 
     def fibonacci(self, num):
+        # # Brute Force
+        # l = []
+        # n = 0
+        # for i in range(num+1):
+        #     if i == 0 or i == 1:
+        #         l.append(i)
+        #         continue
+        #     else:
+        #         n = l[i-1] + l[i-2]
+        #         l.append(n)
+        # print(l)
+
+        # Better Approach
         if num <= 1:
             return num
         return self.fibonacci(num-1) + self.fibonacci(num-2)
+        
 
 
     def sumFirstN(self, num):
@@ -57,3 +71,5 @@ class recursion:
         if s[i] != s[n-i-1]:
             return False
         return self.stringPalindrome(s, i+1)
+
+r = recursion()
