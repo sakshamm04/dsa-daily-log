@@ -47,11 +47,6 @@
 #         print("Grade S")
 #     else:
 #         print("Invalid!")
-        
-# # num1 = int(input("Enter the marks of sub1: "))
-# # num2 = int(input("Enter the marks of sub2: "))
-# # num3 = int(input("Enter the marks of sub3: "))
-# # grade(num1, num2, num3)
 
 # def alphabetTriangle(num):
 #     for i in range(num):
@@ -69,10 +64,6 @@
 
 #         print()
 
-# num = int(input("Enter Num: "))
-# alphabetTriangle(num)
-
-
 # def alphabetPyramid(num):
 #     for i in range(5):
 #         var = 65
@@ -85,8 +76,6 @@
 #         for j in range((num-i-1)):
 #             print("  ",end="")
 #         print()
-
-# alphabetPyramid(5)
 
 
 def numberSquare(num):
@@ -101,4 +90,3 @@ def numberSquare(num):
             layer = num - mini
             print(layer, end=" ")
         print()
-numberSquare(5)
