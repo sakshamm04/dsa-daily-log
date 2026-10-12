@@ -78,15 +78,15 @@
 #         print()
 
 
-def numberSquare(num):
-    for i in range((2*num)-1):
-        size = 2*num-1
-        for j in range((2*num)-1):
-            top = i
-            bottom = (size-1)-i
-            left = j
-            right = (size-1)-j
-            mini = min(top, bottom, left, right)
-            layer = num - mini
-            print(layer, end=" ")
-        print()
+# def numberSquare(num):
+#     for i in range((2*num)-1):
+#         size = 2*num-1
+#         for j in range((2*num)-1):
+#             top = i
+#             bottom = (size-1)-i
+#             left = j
+#             right = (size-1)-j
+#             mini = min(top, bottom, left, right)
+#             layer = num - mini
+#             print(layer, end=" ")
+#         print()
