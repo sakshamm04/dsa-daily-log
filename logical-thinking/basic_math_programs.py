@@ -71,17 +71,16 @@ class Basic_math:
         print(l)
 
     # 5. Prime Number
-    def primeNumber(self):
+    def primeNumber(self, n=None):
+        if n is None:  # no value passed, fall back to the object's number
+            n = self.num
         counter = 0
-        for i in range(1, int(math.sqrt(self.num))+1):
-            if self.num % i == 0:
+        for i in range(1, math.isqrt(n) + 1):
+            if n % i == 0:
                 counter += 1
-                if int(self.num/i) != i:
+                if n // i != i:
                     counter += 1
-        if counter == 2:
-            print("A prime no.")
-        else: 
-            print("Not a prime no.")
+        return 1 if counter == 2 else 0
 
     # 6. GCD of two numbers 
     # Brute Force, O(min(n1,n2))
@@ -107,6 +106,45 @@ class Basic_math:
         else:
             print("GCD: ",self.num)
 
+    def count_odd(self):
+        count = 0
+        num_copy = self.num
+        while(num_copy > 0):
+            last_dig = num_copy % 10
+            if last_dig % 2 != 0:
+                count += 1
+            num_copy //= 10
+        print(f"Count of Odd Number: {count}")
+
+    def max_num(self):
+        max = 0
+        num_copy = self.num
+        while(num_copy > 0):
+            last_dig = num_copy % 10
+            if last_dig > max:
+                max = last_dig
+            num_copy //= 10
+        print(f"Max Number: {max}")
+
+    def perfect_number(self):
+        sum_div = 0
+        for i in range(1, (self.num // 2) + 1):
+            if (self.num % i) == 0:
+                sum_div += i
+        if sum_div == self.num:
+            print("Perfect Number: ",sum_div)
+        else:
+            print("Not a Perfect Number")
+
+    def all_prime(self):
+        count_prime = 0
+        i = 2
+        while(i <= self.num):
+            if self.primeNumber(i):
+                count_prime += 1
+            i += 1
+        print(f"Count of Prime Numbers from {1} to {self.num} = {count_prime}")
+
     # Print all Functions
     def all_programs(self):
         self.extraction_And_Reverse()
@@ -115,7 +153,12 @@ class Basic_math:
         self.divisors()
         self.primeNumber()
         self.gcd()
+        self.count_odd()
 
-num = int(input())
+num = int(input("Enter a number: "))
 obj = Basic_math(num)
-obj.all_programs()
+# obj.all_programs()
+obj.count_odd()
+obj.max_num()
+obj.perfect_number()
+obj.all_prime()
